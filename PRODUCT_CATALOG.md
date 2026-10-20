@@ -1,8 +1,8 @@
 # Apophis Evidence Desk — öffentlicher Produktkatalog
 
-**Öffentlicher Produktstand:** Preview 0.4.8 · Stand 20. Oktober 2026
+**Öffentlicher Produktstand:** Preview 0.5.0-offline-only · Stand 20. Oktober 2026
 
-**Download:** [Preview-Paket 0.4.8](releases/Apophis-Evidence-Desk-v0.4.8-public-patterns-preview.zip) · [SHA-256-Prüfsumme](releases/Apophis-Evidence-Desk-v0.4.8-public-patterns-preview.zip.sha256) · [Systemvergleich](SYSTEM_COMPARISON.md)  
+**Download:** [Preview-Paket 0.5.0](releases/Apophis-Evidence-Desk-v0.5.0-offline-only-preview.zip) · [SHA-256-Prüfsumme](releases/Apophis-Evidence-Desk-v0.5.0-offline-only-preview.zip.sha256) · [Offline-Policy](OFFLINE_ONLY.md) · [Prüfbericht](VALIDATION_REPORT.md) · [Systemvergleich](SYSTEM_COMPARISON.md)
 **Zweck:** verständliche Produktbeschreibung und Statusübersicht ohne interne Betriebs-, Schlüssel-, Konfigurations- oder Sicherheitsdetails.
 
 ## Kurzbeschreibung
@@ -18,15 +18,31 @@ Apophis ist derzeit ein Prototyp mit lokalen Vorschaukomponenten und einer stati
 | Evidence Desk | Aussagen, Quellen, Belege, Gegenbefunde, Unsicherheiten und menschliche Prüfungen gemeinsam ordnen. | Lokaler Prototyp; keine automatische fachliche Bestätigung. |
 | Resilienzregister | Themen, Verantwortlichkeiten, Prüfzeitpunkte und Nachweisreferenzen übersichtlich erfassen. | Arbeitsmodell mit PDCA-Arbeitsphase, offenen/überfälligen Korrekturmaßnahmen und synthetischem Startbestand; keine Vollständigkeits- oder Konformitätsaussage. |
 | Übungs- und Wiederanlaufprotokoll | Beobachtungen, Wiederherstellungsziele und Folgeaufgaben aus begrenzten Übungen festhalten. | Vorlage/Arbeitsmodell; kein Live-Krisenmanagement. |
-| Research Radar | Bibliografische Metadaten als Eingang für eine fachliche Sichtung sammeln. | Optionale Vorschau; standardmäßig deaktiviert; kein Volltext- oder KI-Review. |
+| Research Radar | Bibliografische Metadaten als Eingang für eine fachliche Sichtung sammeln. | In v0.5.0 offline-only deaktiviert; kein externer Abruf. |
 | Zweistufige Warnmeldungen | Einzelmeldungen zunächst als Vormeldung und bei mehreren unabhängigen Quellen als quellenbestätigt darstellen. | Separater lokaler Prototyp; Quellenbestätigung ist keine Wahrheits- oder Gefahrenbewertung. |
 | Strom-/Datenverkehr-Anomalie-Demo | Ausgewählte Zeitreihen lokal auf statistische Abweichungen prüfen und Prüfhilfen ausgeben. | Passives CSV-Demo; kein Live-Monitoring und kein trainierter Cyberangriffsklassifikator. |
 | KI über API | Begrenzte, freigegebene Textaufgaben als nachvollziehbare Vorschläge unterstützen. | Leitplanken-Entwurf; kein produktiver Anbieteradapter. |
 | Lokale KI und quantisierte Modelle | Lokale Modellinferenz anhand Hardware, Aufgabe und Qualitätsanforderungen evaluieren. | Bauplan; kein integriertes Modell und keine pauschale Quantisierungsfreigabe. |
-| Verschlüsselte Sicherung | Anwendungsdaten als verschlüsseltes Backup für eine getrennte Wiederherstellung sichern. | Manuelles CLI-Preview; kein vollständiges Serverabbild, kein Zeitplan und kein Remote-Transferdienst. |
+| Verschlüsselte Sicherung | Anwendungsdaten als verschlüsseltes Backup für eine getrennte Wiederherstellung sichern. | Manuelles CLI-Preview; lokale Ziele im Offline-only-Betrieb; kein vollständiges Serverabbild und kein Remote-Transferdienst. |
 | Notfallmodus | Apophis-Anwendungsrouten sperren, ein begrenztes verschlüsseltes Beweispaket erstellen und eine kontrollierte Wiederfreigabe verlangen. | Preview mit Zwei-Personen-Autorisierungshaken und empfängerbezogener Schlüsselkonfiguration; keine Host- oder Anlagenabschaltung. |
 
-Die Funktionen und Reifegrade beziehen sich auf das zugehörige v0.4.8-Preview-Paket. Öffentliche Muster anderer Produkte wurden abstrahiert und eigenständig umgesetzt; Details, Quellen und nicht implementierte Anschlussideen stehen in `PUBLIC_PATTERN_ADAPTATIONS.md` im Preview-Paket. Die GitHub-Pages-Demo in diesem Repository ist eine eigenständige, statische Darstellung und führt keine dieser Betriebsfunktionen aus.
+Die Funktionen und Reifegrade beziehen sich auf das zugehörige v0.5.0-Preview-Paket. Öffentliche Muster anderer Produkte wurden als Orientierung geprüft; ausgewählte Prinzipien wurden in begrenzte Vorschau-Arbeitsmodelle oder Anforderungen übersetzt, weitere Ideen sind ausdrücklich nicht implementiert. Details, Quellen und jeweiliger Status stehen in `PUBLIC_PATTERN_ADAPTATIONS.md` im Preview-Paket. Die Offline-only-Policy der Preview sperrt eingebaute externe Netzwerkzugriffe und nicht-lokale Listener. Drei systemd-Filtervorlagen sind enthalten, aber nicht automatisch aktiviert; hostweite Isolation muss separat eingerichtet und geprüft werden. Die GitHub-Pages-Demo in diesem Repository ist eine eigenständige, statische Darstellung und führt keine dieser Betriebsfunktionen aus. Sie bleibt bewusst eine begrenzte Anschauung und wird nicht zu einer funktionsgleichen Produktkopie ausgebaut.
+
+## Entstehung, nachträgliche Ähnlichkeiten und Umgebungen
+
+Nach Aussage des Projektinitiators entstand Apophis aus eigenen praktischen Zielsetzungen. Die einschlägigen DIN-/ISO-Normen und vergleichbaren Regelwerke waren ihm bei der ursprünglichen Entwicklungsidee nicht bekannt. Erst eine spätere Recherche machte teilweise ähnliche Zielrichtungen sichtbar, zum Beispiel nachvollziehbare Evidenz, definierte Zuständigkeiten und Resilienzarbeit.
+
+Diese Einordnung beschreibt eine rückblickend erkannte **Ähnlichkeit von Zielen**. Sie ist weder eine Behauptung, dass bestimmte Normen bewusst umgesetzt wurden, noch ein Nachweis für Vollständigkeit, Konformität, Zertifizierbarkeit, Neuheit oder Alleinstellung. Für Apophis liegt keine systematische DIN-/ISO-Kontrollmatrix und keine externe Normenbewertung vor. Der dokumentierte Systemvergleich ist quellenbezogen und weist aus, wo nur öffentliche Hersteller- oder Standardunterlagen betrachtet wurden.
+
+| Umgebung | Vorhandener Stand | Geprüft / nicht geprüft |
+|---|---|---|
+| GitHub Pages, `index.html` | Statischer öffentlicher Katalog. | Seiteninhalt, keine Produkt-API oder Echtdatenverarbeitung. |
+| GitHub Pages, `demo/index.html` | Kleine interaktive Mock-Demo mit erfundenen Beispielen. | Keine Live-Quellen, keine persistente Eingabe, keine Verbindung zum lokalen Produktpaket. Bewusst nicht weiter ausgebaut. |
+| Lokales Preview-Paket 0.5.0 | Loopback-gebundene Node.js-Dienste und getrennte Vorschau-Module. | Paket-Selbsttests mit synthetischen Daten; kein Produktionsbetrieb und keine externen Identitäts-, Behörden- oder Betreiberadapter. |
+| Lokale Prüfumgebung | Frisch entpackte temporäre Kopie unter Linux, Node.js 24.22.0, npm 11.19.1. | `npm test`, EU-Kontroll-Selbstlauf, Audit-Pack-Export, SBOM- und Archivprüfung bestanden. EU-Auswertung: 3 bestanden, 3 bedingt; keine Zertifizierung. |
+| Fremde Produkt- und Betreiberumgebungen | HiScout, verinice, ServiceNow, Sentinel, Veeam und reale OT-/KRITIS-Umgebungen. | Kein gleichartiger Labortest oder Pilot dokumentiert; Vergleiche beruhen auf öffentlich verfügbaren Unterlagen. |
+
+Die statische Demo ist bewusst ein kleines Kommunikations- und Anschauungsartefakt. Ihr Umfang ist kein Maß für den Umfang des lokalen Preview-Pakets und sie soll nicht als Online-Betriebsoberfläche missverstanden werden.
 
 ## Leitlinien
 
@@ -78,7 +94,7 @@ Wir unterscheiden drei Arten von Aussagen:
 2. **Intern geprüft:** ein benannter, wiederholbarer Test wurde mit dokumentiertem Umfang und Ergebnis ausgeführt.
 3. **Extern bestätigt:** eine unabhängige Stelle hat einen definierten Prüfgegenstand nach vereinbartem Verfahren geprüft und ein Ergebnis veröffentlicht.
 
-Für Preview 0.4.8 lief der vollständige lokale Prüflauf (`npm test`) auf einer frischen Kopie erfolgreich durch. Nach einem reproduzierten False-PASS-Fall wurde der Offline-Verifier so geändert, dass ein ausdrücklich angegebener fehlender, unlesbarer oder ungültiger Approval-Pfad fehlschlägt. Fünf Regressionfälle für optionale Prüfung, gültiges Protokoll, fehlende Datei, fehlerhaftes JSON und falsche Struktur sind Teil der Suite. Die lokalen synthetischen Recovery- und Notfall-Tests bestanden ebenfalls. Ein anbieterneutrales Vergleichsprotokoll mit gemeinsamen synthetischen Szenarien liegt dem Preview-Paket bei. Geprüft wurden nur lokale Abläufe; das belegt nicht Sicherheit, Core-Isolation, Datenabfluss, Verfügbarkeit, Wiederherstellbarkeit im Betrieb, regulatorische Eignung oder Angriffserkennung. Eine unabhängige externe Sicherheitsprüfung oder ein direkter Labortest gegen HiScout, verinice, ServiceNow, Sentinel oder Veeam ist nicht dokumentiert. Der Vergleich beruht für diese Produkte auf öffentlichen Produktunterlagen. Aussagen über einen Vorsprung dürfen daher erst nach positiven, reproduzierbaren externen Tests erscheinen — und dann nur bezogen auf den tatsächlich geprüften Prüfgegenstand.
+Für Preview 0.5.0 lief der vollständige lokale Prüflauf (`npm test`) auf einer frischen Kopie erfolgreich durch. Nach einem reproduzierten False-PASS-Fall wurde der Offline-Verifier so geändert, dass ein ausdrücklich angegebener fehlender, unlesbarer oder ungültiger Approval-Pfad fehlschlägt. Fünf Regressionfälle für optionale Prüfung, gültiges Protokoll, fehlende Datei, fehlerhaftes JSON und falsche Struktur sind Teil der Suite. Die lokalen synthetischen Recovery- und Notfall-Tests bestanden ebenfalls. Ein anbieterneutrales Vergleichsprotokoll mit gemeinsamen synthetischen Szenarien liegt dem Preview-Paket bei. Geprüft wurden nur lokale Abläufe; das belegt nicht Sicherheit, Core-Isolation, Datenabfluss, Verfügbarkeit, Wiederherstellbarkeit im Betrieb, regulatorische Eignung oder Angriffserkennung. Eine unabhängige externe Sicherheitsprüfung oder ein direkter Labortest gegen HiScout, verinice, ServiceNow, Sentinel oder Veeam ist nicht dokumentiert. Der Vergleich beruht für diese Produkte auf öffentlichen Produktunterlagen. Aussagen über einen Vorsprung dürfen daher erst nach positiven, reproduzierbaren externen Tests erscheinen — und dann nur bezogen auf den tatsächlich geprüften Prüfgegenstand.
 
 „Bisher kein Gegenbeweis bekannt“ ist kein positiver Test und kein Nachweis für Alleinstellung oder Überlegenheit.
 
@@ -135,4 +151,4 @@ Kontakt für Pilot- und Review-Anfragen: [Kai Valenta](mailto:kava140982@gmail.c
 
 ---
 
-**Stand: Preview 0.4.8 · 20. Oktober 2026.** Dieser Katalog ersetzt keine Sicherheitsprüfung, Rechtsberatung, Produktdokumentation für einen konkreten Betrieb oder unabhängige Zertifizierung.
+**Stand: Preview 0.5.0-offline-only · 20. Oktober 2026.** Dieser Katalog ersetzt keine Sicherheitsprüfung, Rechtsberatung, Produktdokumentation für einen konkreten Betrieb oder unabhängige Zertifizierung.

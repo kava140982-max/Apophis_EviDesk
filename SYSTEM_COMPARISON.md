@@ -1,12 +1,12 @@
 # Apophis Evidence Desk — öffentlicher Systemvergleich
 
-**Stand:** 20. Oktober 2026 · **Apophis-Vorschau:** 0.4.8-public-patterns-preview
+**Stand:** 20. Oktober 2026 · **Apophis-Vorschau:** 0.5.0-offline-only-preview
 
 Dieser Vergleich stellt den Funktionsumfang und die Reifestufe des lokalen Apophis-Prototyps den öffentlich beschriebenen Funktionen ausgewählter Systeme und Standards gegenüber. Herstellerunterlagen sind Selbstauskünfte. Die Wettbewerbsprodukte wurden nicht in eigenen Testmandanten oder Laboren getestet. Diese Übersicht ist weder vollständige Marktstudie noch Sicherheitsgutachten.
 
 ## Vergleich auf einen Blick
 
-| Produkt / Standard | Öffentliche Beschreibung | Apophis 0.4.8 | Faire Einordnung |
+| Produkt / Standard | Öffentliche Beschreibung | Apophis 0.5.0 | Faire Einordnung |
 |---|---|---|---|
 | **HiScout GRC / BCM** | Anbieter dokumentiert eine GRC-Suite mit ISM, Grundschutz, Datenschutz und BCM sowie gemeinsame Datenpflege über mehrere Module. | Lokales Evidenz- und Resilienz-Arbeitsmodell; kein ausgereiftes organisationsweites GRC-/BCM-System. | HiScout ist ein reiferer, spezialisierter Produktvergleich für ISMS und BCM. Öffentliche Unterlagen sagen nichts darüber aus, ob es eine mit Apophis identische „Core-Trennung“ gibt. |
 | **verinice / verinice.veo** | Anbieter beschreibt GRC, ISMS, Datenschutz und Notfall-/Business-Continuity-Management mit Unterstützung für mehrere etablierte Standards; Teile sind quelloffen. | Synthetische Register, Evidenz- und Review-Abläufe; keine umfassende Normen-/Kontrollbibliothek oder produktive Rollout-Plattform. | verinice deckt ISMS/GRC/BCM deutlich vollständiger ab. Das Preview ist kein Ersatz. |
@@ -24,7 +24,7 @@ Es beweist **nicht**, dass ein Vergleichssystem genau dieselbe Prozessgrenze rea
 
 ## Prüfergebnis des Apophis-Pakets
 
-Für Version 0.4.8 lief `npm test` auf einer frischen lokalen Kopie erfolgreich durch. Die Suite schließt fünf gezielte Regressionen des Offline-Verifiers ein. Unter anderem wird geprüft, dass ein explizit angegebener fehlender oder fehlerhafter Approval-Pfad fehlschlägt. Die Tests verwenden synthetische Daten. Sie sind kein Penetrationstest, keine Zertifizierung, kein externer Recovery-Test und kein Produktvergleich in Anbieter-Testumgebungen.
+Für Version 0.5.0 lief `npm test` auf einer frischen lokalen Kopie erfolgreich durch. Die Suite schließt fünf gezielte Regressionen des Offline-Verifiers ein. Unter anderem wird geprüft, dass ein explizit angegebener fehlender oder fehlerhafter Approval-Pfad fehlschlägt. Die Tests verwenden synthetische Daten. Sie sind kein Penetrationstest, keine Zertifizierung, kein externer Recovery-Test und kein Produktvergleich in Anbieter-Testumgebungen.
 
 Der Produktvergleich ist daher **dokumentenbasiert**. Eine spätere direkte Prüfung müsste vorab gleiche Szenarien, Daten, Rollen, Konfiguration, Messkriterien und zugelassene Testumgebungen vereinbaren. Ein Ergebnis dürfte nur für Version und Prüfgegenstand gelten.
 
