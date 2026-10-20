@@ -31,6 +31,7 @@ Apophis ist derzeit weder ein SIEM/SOC noch ein GRC-Komplettsystem, kein automat
 | Verschlüsselte Sicherung | Apophis-Anwendungsdaten als Wiederherstellungskopie sichern. | Manuell angestoßenes CLI-Preview; getrenntes Ziel lokal auswählbar. | Kein vollständiges Betriebssystem-/Serverabbild, kein automatischer externer Transfer und keine nachgewiesene Wiederherstellung in einer Zielumgebung. |
 | Notfallmodus | Apophis selbst begrenzt sperren, ein vorgesehenes Beweispaket erzeugen und Wiederfreigabe verlangen. | Applikationsbezogenes Preview mit Zwei-Personen-Autorisierungshaken. | Keine Abschaltung von Host, Netzwerk, Stromversorgung, Leitstelle, OT/SCADA oder Drittprodukten. Der Haken allein ersetzt keine unabhängige Identitätsprüfung. |
 | Lieferketten-/Paketprüfung | Paketbestand und lokale Prüfergebnisse nachvollziehbar machen. | Manifest/SBOM und lokale Verifikationsskripte vorhanden. | Keine unabhängige Build-Provenance, kein öffentlicher Transparenzlog und keine vollständige Absicherung der Build- und Releasekette. |
+| Separates Schulungs-Preview | Freiwillige Module zu Evidenz, Offline-Grenzen, Mandanten, Freigaben und Prüfgrenzen. | Eigenständige lokale Windows-x64-Preview mit 365 Tagen Schreibzeit und anschließendem permanentem Lesemodus; Fortschrittsexport bleibt verfügbar. | Nicht in den Core integriert; lokale Profile ohne Anmeldung oder Mitarbeitendentrennung; kein Kompetenznachweis, Produktivsystem oder manipulationssicheres Lizenzsystem. Keine echten Beschäftigtendaten verwenden. |
 
 ### 2.1 Zentrale technische Grenzen
 
@@ -40,6 +41,12 @@ Apophis ist derzeit weder ein SIEM/SOC noch ein GRC-Komplettsystem, kein automat
 - **Zwei-Personen-Prinzip:** Im Preview gibt es einen Integrations-/Autorisierungshaken. Zwei unterschiedliche Zeichenketten oder Kennungen sind für sich kein Nachweis zweier realer, authentisierter Personen und kein ausgerolltes organisatorisches Vier-Augen-Verfahren.
 - **Sicherung:** Verschlüsselung schützt eine Kopie im vorgesehenen Ablauf. Ob Schlüsselmanagement, Aufbewahrung, Offline-/Externe Ablage, Integrität und Wiederherstellungszeit den Anforderungen einer Organisation genügen, muss separat geplant und praktisch getestet werden.
 - **Anomaliehinweise:** Ein Anstieg im Datenverkehr kann viele harmlose Gründe haben. Eine Abweichung ist kein Angriffsnachweis; ein unauffälliger Wert schließt einen Angriff nicht aus.
+
+### 2.2 Separates Schulungs-Preview
+
+Das Schulungs-Preview ist ein eigenständiges Paket und kein Core-Modul. Es bietet neun freiwillige Lernmodule und speichert Lernprofile lokal. Der Zeitraum beginnt beim ersten Start auf dem Gerät. Nach 365 Tagen bleiben Lerninhalte, vorhandene Profile und Fortschritte dauerhaft lesbar und exportierbar; neue Profile und Änderungen werden abgewiesen. Ein Systemwechsel oder fehlerhafter lokaler Status führt in den Lesemodus.
+
+Die Gerätekennung wird ausschließlich lokal als Hash verarbeitet; es gibt keinen Lizenzserver. Die Offline-Bindung ist absichtlich als Preview-Nutzungsregel eingeordnet und nicht gegen lokale Administratoren manipulationssicher. Da es keine Anmeldung oder getrennte Berechtigungen gibt, können lokale Nutzende Profile gegenseitig einsehen. Daher keine echten Beschäftigtendaten eingeben. Die Lernmarkierung bestätigt ausschließlich die Ansicht eines Moduls, nicht Wissen, Befähigung, Prüfung oder Zertifizierung. Siehe [Umsetzungsplan](training-app/IMPLEMENTATION_PLAN.md) und [Nutzungshinweise](training-app/README.md).
 
 ## 3. Wo liegt was?
 

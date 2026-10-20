@@ -7,6 +7,8 @@
 **Detaillierter Katalog:** [Kurz-Katalog](PRODUCT_CATALOG.md) · [Ausführlicher Produktkatalog](PRODUKTKATALOG_AUSFUEHRLICH.md)
 **Systemvergleich:** [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md)
 
+**Separates Schulungs-Preview:** [Plan und Grenzen](training-app/IMPLEMENTATION_PLAN.md) · [Nutzung und Lizenzmodell](training-app/README.md)
+
 **Preview 0.5.0 (offline-only):** [Quellpaket herunterladen](releases/Apophis-Evidence-Desk-v0.5.0-offline-only-preview.zip) · [SHA-256](releases/Apophis-Evidence-Desk-v0.5.0-offline-only-preview.zip.sha256) · [Offline-Policy](OFFLINE_ONLY.md) · [Prüfbericht](VALIDATION_REPORT.md)
 
 Apophis Evidence Desk ist ein frühes Arbeitsmodell für nachvollziehbare Evidenz- und Resilienzarbeit. Es soll Aussagen, Belege, Unsicherheiten, Prüfschritte und menschliche Zuständigkeiten zusammenführen. Das aktuelle Softwarepaket ist ein lokaler Review-Prototyp; die GitHub-Pages-Seite ist ein eigenständiger, statischer Katalog.
@@ -36,6 +38,10 @@ Das ist eine **rückblickende Ähnlichkeit der Ziele**. Sie belegt weder eine be
 - Rollen, Schwellenwerte, Datenquellen, Aufbewahrung, Modelle und Betriebsabläufe müssen für jede Organisation und Umgebung individuell angepasst und geprüft werden.
 
 Apophis ist **kein** Schutz- oder Live-Überwachungssystem, keine Angriffserkennung, kein fertiger KRITIS-Produktivdienst und kein Nachweis gesetzlicher Konformität. Ein Alleinstellungs- oder Sicherheitsüberlegenheitsanspruch wird nicht erhoben.
+
+## Separates Schulungs-Preview
+
+Ein eigenständiges Windows-x64-Trainings-Preview bietet neun freiwillige Lernmodule. Es ist nicht in den Evidence Core integriert und speichert lokale Lernprofile. Der Schreibzeitraum läuft 365 Tage ab dem ersten Start; danach bleiben Inhalte und Daten lesbar/exportierbar, Änderungen sind gesperrt. Es ist kein Kompetenznachweis oder Produktivsystem. Details und Systembindungsgrenzen: [Implementierungsplan](training-app/IMPLEMENTATION_PLAN.md).
 
 ## Lokale Prüfergebnisse
 

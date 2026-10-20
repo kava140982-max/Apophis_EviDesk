@@ -1,0 +1,11 @@
+{
+  "name": "apophis-training-preview",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline-first training preview with a 365-day write period and perpetual read-only access",
+  "bin": "server.js",
+  "pkg": {
+    "targets": ["node24-win-x64"],
+    "assets": ["public/**/*"]
+  }
+}
