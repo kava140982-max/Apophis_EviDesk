@@ -4,7 +4,7 @@
 
 **Statische Konzeptdemo:** [Anschauung öffnen](https://kava140982-max.github.io/Apophis_EviDesk/demo/)
 
-**Detaillierter Katalog:** [PRODUCT_CATALOG.md](PRODUCT_CATALOG.md)
+**Detaillierter Katalog:** [Kurz-Katalog](PRODUCT_CATALOG.md) · [Ausführlicher Produktkatalog](PRODUKTKATALOG_AUSFUEHRLICH.md)
 **Systemvergleich:** [SYSTEM_COMPARISON.md](SYSTEM_COMPARISON.md)
 
 **Preview 0.5.0 (offline-only):** [Quellpaket herunterladen](releases/Apophis-Evidence-Desk-v0.5.0-offline-only-preview.zip) · [SHA-256](releases/Apophis-Evidence-Desk-v0.5.0-offline-only-preview.zip.sha256) · [Offline-Policy](OFFLINE_ONLY.md) · [Prüfbericht](VALIDATION_REPORT.md)
